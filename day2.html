@@ -1,0 +1,653 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>순살국어 3편 2일차 성과</title>
+<meta name="description" content="3편 게시 후 57시간 성과 — 잘한 점, 망한 원인, 4·5편에 가져갈 것">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#f7f2e6;--fg:#1b1f2a;--fg2:#5e6270;--line:#e4dccb;--card:#fffdf8;--acc:#e0a400;--sig:#ffc21a;--c1:#4d7fd6;--c2:#8a8f9c;--c3:#c9c3b4;--good:#1f8a5a;--bad:#d4493b;--th:#f1ead9;--grid:#e8e1d1;--band:rgba(255,194,26,.16)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171f;--fg:#ece9e1;--fg2:#a5a8b2;--line:#2c313d;--card:#1c2029;--acc:#ffc21a;--sig:#ffc21a;--c1:#79a6ff;--c2:#9aa0ad;--c3:#4a4f5c;--good:#4fc48b;--bad:#ff7a6b;--th:#232834;--grid:#2a2f3a;--band:rgba(255,194,26,.12)}}
+:root[data-theme=dark]{--bg:#14171f;--fg:#ece9e1;--fg2:#a5a8b2;--line:#2c313d;--card:#1c2029;--acc:#ffc21a;--sig:#ffc21a;--c1:#79a6ff;--c2:#9aa0ad;--c3:#4a4f5c;--good:#4fc48b;--bad:#ff7a6b;--th:#232834;--grid:#2a2f3a;--band:rgba(255,194,26,.12)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;font-size:16.5px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+.hero{background:#1b1f2a;color:#fbf6ea;padding:72px 24px 64px}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{display:inline-block;background:#ffc21a;color:#1b1f2a;font-weight:800;font-size:13px;letter-spacing:.04em;padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.25;letter-spacing:-.03em;margin:0 0 14px;font-weight:800}
+.hero h1 em{font-style:normal;color:#ffc21a}
+.hero p{color:#b9bccb;margin:0;font-size:15px}
+main{max-width:860px;margin:0 auto;padding:40px 24px 120px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:8px 0 22px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c3)}
+.kpi.up::before{background:var(--good)} .kpi.down::before{background:var(--bad)} .kpi.maybe::before{background:var(--sig)}
+.kl{font-size:13.5px;color:var(--fg2);font-weight:600} .kl small{font-weight:500;opacity:.8}
+.kv{display:flex;align-items:baseline;gap:8px;margin:6px 0 8px;flex-wrap:wrap}
+.old{color:var(--fg2);font-size:14px} .arr{color:var(--fg2)} .new{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.kb{display:inline-block;font-size:12.5px;font-weight:800;padding:3px 10px;border-radius:999px;background:var(--th)}
+.up .kb{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.down .kb{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.maybe .kb{background:color-mix(in srgb,var(--sig) 28%,transparent)}
+.kn{font-size:13px;color:var(--fg2);margin-top:8px;line-height:1.55}
+.oneline{background:#ffc21a;color:#1b1f2a;border-radius:18px;padding:22px 26px;font-size:clamp(19px,3vw,24px);font-weight:800;line-height:1.45;letter-spacing:-.02em;margin:6px 0 34px}
+.oneline span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.05em;opacity:.7;margin-bottom:4px}
+h2{font-size:25px;letter-spacing:-.02em;margin:72px 0 18px;padding-top:24px;border-top:2px solid var(--fg);font-weight:800}
+h3{font-size:19px;margin:40px 0 12px;font-weight:800;letter-spacing:-.01em}
+h3.tag{display:inline-block;padding:6px 14px;border-radius:10px;font-size:16px;margin:28px 0 10px}
+h3.tag span{font-weight:600;opacity:.75;font-size:13px;margin-left:6px}
+h3.good{background:color-mix(in srgb,var(--good) 15%,transparent);color:var(--good)}
+h3.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+h3.next{background:#ffc21a;color:#1b1f2a}
+p{margin:0 0 14px} strong{font-weight:800}
+p.lab{font-size:12.5px;font-weight:800;letter-spacing:.05em;color:var(--fg2);margin:18px 0 6px;text-transform:uppercase}
+p.lab.acc{color:var(--acc)}
+ul,ol{padding-left:22px;margin:0 0 18px} li{margin:7px 0} li::marker{color:var(--acc);font-weight:800}
+.tw{overflow-x:auto;margin:18px 0 26px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.6}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line)}
+th{background:var(--th);font-weight:800;white-space:nowrap} tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700}
+figure.chart{margin:22px 0 30px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 10px 12px}
+figure svg{width:100%;height:auto;display:block;font-family:Pretendard,sans-serif}
+figcaption{color:var(--fg2);font-size:13px;margin-top:8px;text-align:center;padding:0 10px}
+svg .grid{stroke:var(--grid);stroke-width:1} svg .ax{fill:var(--fg2);font-size:12px}
+svg .lg{font-size:13px;font-weight:800} svg .band{fill:var(--band)} svg .bandt{fill:var(--fg2);font-size:12px;font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:48px 0}
+code{font-size:13px;background:var(--th);padding:1px 6px;border-radius:6px}
+@media (max-width:560px){body{font-size:15.5px} .hero{padding:52px 16px 44px} main{padding:28px 16px 80px} th,td{padding:9px 10px;font-size:13.5px}}
+</style></head><body>
+<header class="hero"><div class="in"><div class="eyebrow">순살국어 · 3편 2일차 성과</div>
+<h1>「풀지 말지 결정하는 법」<br><em>영상은 좋아졌고, 확산이 막혔다</em></h1>
+<p>게시 후 약 57시간 · YouTube 스튜디오 원천 데이터 직접 재수집 · 2026년 10월 30일</p></div></header>
+<main><h2>한눈에 보기</h2>
+<div class="kpis"><div class="kpi up"><div class="kl">평균 조회율</div><div class="kv"><span class="old">2편 13.8%</span><span class="arr">→</span><span class="new">28.1%</span></div><div class="kb">개선 · 2배</div><div class="kn">절반은 영상이 짧아서(4:28 vs 9:22), 절반은 구성 효과</div></div><div class="kpi down"><div class="kl">유효 조회수 <small>게시 후 57시간</small></div><div class="kv"><span class="old">2편 1,008</span><span class="arr">→</span><span class="new">374</span></div><div class="kb">악화 · −63%</div><div class="kn">실제로 영상을 본 사람이 2편의 3분의 1</div></div><div class="kpi flat"><div class="kl">인트로 0:10 유지율</div><div class="kv"><span class="old">2편 65.4%</span><span class="arr">→</span><span class="new">67.0%</span></div><div class="kb">차이 없음</div><div class="kn">+1.6%p, 오차 범위(±3.5%p) 안</div></div><div class="kpi maybe"><div class="kl">인트로 0:30 유지율</div><div class="kv"><span class="old">2편 42.4%</span><span class="arr">→</span><span class="new">49.5%</span></div><div class="kb">개선 가능성 높음</div><div class="kn">+7.1%p, 오차 경계라 확정은 아님</div></div><div class="kpi up"><div class="kl">1:00 유지율 <small>참고</small></div><div class="kv"><span class="old">2편 29.7%</span><span class="arr">→</span><span class="new">49.9%</span></div><div class="kb">확실한 개선</div><div class="kn">+20%p</div></div></div>
+<div class="oneline"><span>한 줄 요약</span>영상 안은 확실히 좋아졌는데,<br>영상을 볼 사람이 안 들어왔다.</div>
+<h3 class="tag good">잘한 점</h3>
+<ol>
+<li><strong>0:30~2:00 유지가 확실히 좋아졌습니다.</strong> 1:00 시점에 2편보다 +20%p, 2:00 시점에 +18%p입니다. "세 가지 기준만 기억하시면 됩니다"(0:43) 같은 번호 예고와 짧은 구성이 효과를 냈습니다.</li>
+<li><strong>인트로 끝 이탈이 사라졌습니다.</strong> 2편은 0:34~0:45에 크게 빠졌는데, 3편은 0:30~1:00 구간이 거의 그대로였습니다.</li>
+<li><strong>들어온 사람의 반응은 좋습니다.</strong> 좋아요/유효조회 4.8%로 2편(3.9%)보다 높고, 첫 12시간 조회도 재런칭 4편 중 1등이었습니다.</li>
+</ol>
+<h3 class="tag bad">망한 원인</h3>
+<ol>
+<li><strong>게시 시각. 확산 테스트 시간대를 놓쳤습니다.</strong> 홈 피드 확산이 결정되는 게시 후 12~24시간이, 오전 9:51 게시 때문에 밤~다음 날 오전(학생들이 자거나 학교에 있는 시간)에 걸렸습니다.<ul>
+<li>같은 구간 시간당 조회: 2편 약 170회, 3편 13회</li>
+<li>24시간 누적: 2편 2,437, 3편 512</li>
+</ul>
+</li>
+<li><strong>퍼뜨릴 한 문장이 없었습니다.</strong> 공유 0회(2편 21회)로 우연일 확률 0.04%의 확실한 신호입니다. CTR도 3.6%로 2편 5.7%보다 낮았고, 제목 A/B에서도 현재 제목이 꼴찌입니다.</li>
+<li><strong>엔딩이 길고, 최종화면이 없었습니다.</strong> 정리 구간이 64초로 길었고 이 구간에서 남은 시청자의 절반이 나갔습니다. 최종화면 요소가 없어서 엔딩화면 클릭은 0%였습니다.</li>
+</ol>
+<h3 class="tag next">개선할 점 <span>4·5편에 바로</span></h3>
+<ol>
+<li><strong>자정~새벽에 게시하기.</strong> 게시 후 12~24시간이 다음 날 15~23시(하교 후)에 걸리게 합니다.</li>
+<li><strong>공유할 한 문장을 제목·썸네일에 넣기.</strong> 5편 "15년 동안 한 번도 안 빠졌다", 4편 "예열은 사설 말고 작년 수능으로". 제목 A/B는 3안으로 끝까지 돌립니다.</li>
+<li><strong>0:30 안에 "N가지" 번호 예고 넣기.</strong> 이번에 확실히 효과가 확인된 유일한 구성입니다.</li>
+<li><strong>정리는 40초 안으로, 끝에 최종화면 20초 붙이기.</strong> 5편은 적용 완료, 4편은 아직입니다.</li>
+<li><strong>안내 멘트(링크·카톡방)는 정리 직전에 두지 않기.</strong></li>
+<li><strong>성과는 조회수가 아니라 유효 조회·시청시간으로 보기.</strong> 조회수의 75~80%는 홈 피드 미리보기(평균 3.5초)라 숫자가 부풀려져 있습니다.</li>
+</ol>
+<h2>Part 1. 다음 편에 가져갈 것 (중요도 순)</h2>
+<h3>1. 승부는 게시 후 12~24시간에 납니다. 그 시간이 학생들 오후~저녁에 걸리게 올리세요</h3>
+<p class="lab">무슨 일이 있었나</p>
+<ul>
+<li>첫 12시간 조회는 3편이 4편 중 1등이었습니다(362회). 구독자 반응은 좋았습니다.</li>
+<li>12~24시간 구간에서 갈렸습니다.<ul>
+<li>2편·「출제하는 법」: 시간당 약 170회로 홈 피드 확산</li>
+<li>3편: 시간당 13회</li>
+</ul>
+</li>
+<li>24시간 누적: 「출제하는 법」 2,338 / 2편 2,437 / <strong>3편 512</strong></li>
+</ul>
+<p class="lab">왜</p>
+<ul>
+<li>3편은 오전 09:51에 게시했습니다. 그래서 12~24시간 구간이 밤 10시~다음 날 오전 10시, 즉 학생들이 자거나 학교에 있는 시간에 걸렸습니다.</li>
+<li>반대로 2편(00:52 게시)과 「출제하는 법」(02:46 게시)은 이 구간이 다음 날 오후 3시~밤 11시였고, 그때 터졌습니다(2편 최고 시간당 405회).</li>
+<li>3편도 결국 다음 날 오후 3시부터 홈 피드가 한 번 다시 밀어줬습니다. 최고 시간당 126회였고 지금은 식는 중입니다.</li>
+</ul>
+<p class="lab acc">적용</p>
+<ul>
+<li>4·5편은 <strong>자정~새벽 게시</strong>를 권장합니다. 게시 후 12~24시간이 다음 날 15~23시에 걸리게 하기 위해서입니다.</li>
+<li>단, 영상 4편으로 본 패턴입니다. 다음 두 편으로 다시 확인합니다.</li>
+</ul>
+<h3>2. "친구에게 보낼 한 문장"이 없으면 퍼지지 않습니다</h3>
+<p class="lab">무슨 일이 있었나</p>
+<ul>
+<li>3편 공유 0회. 2편과 같은 비율이면 약 8회가 나와야 했습니다. 우연일 확률은 0.04%라 <strong>확실한 신호</strong>입니다.</li>
+<li>클릭률(CTR)도 3.6%로 2편(5.7%)보다 낮았습니다.</li>
+<li>제목 A/B 테스트에서는 현재 제목(방법론형)이 3안 중 꼴찌입니다. 질문형과 숫자·D-day형이 앞서고 있습니다(진행 중).</li>
+</ul>
+<p class="lab">왜</p>
+<ul>
+<li>2편은 "비문학은 이해할 필요 없음"처럼 논쟁적이고 남에게 보내고 싶은 단정이 있었습니다.</li>
+<li>3편은 유용하지만 무난한 방법론이었습니다.</li>
+</ul>
+<p class="lab acc">적용</p>
+<ul>
+<li>5편: "고전시가·고전소설은 15년 동안 한 번도 안 빠졌다"를 제목·썸네일 전면에 둡니다.</li>
+<li>4편: "수능 날 예열, 사설 말고 작년 수능으로" 같은 단정을 전면에 둡니다.</li>
+<li>제목 A/B는 질문형 / 숫자형 / 단정형 3안으로, <strong>끝까지</strong> 돌립니다.</li>
+</ul>
+<h3>3. 0:30 안에 "N가지" 예고를 넣으면 시청자가 남습니다</h3>
+<p class="lab">무슨 일이 있었나</p>
+<ul>
+<li>같은 초 시점 유지율:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>시점</th>
+<th>3편</th>
+<th>2편</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1:00</td>
+<td>49.9%</td>
+<td>29.7%</td>
+</tr>
+<tr>
+<td>2:00</td>
+<td>41.1%</td>
+<td>22.6%</td>
+</tr>
+</tbody>
+</table></div>
+<p>표본 오차를 감안해도 <strong>확실한 개선</strong>입니다.</p>
+<ul>
+<li>0:30~1:00 구간에서 다른 영상은 7~13%p씩 빠졌는데 3편은 거의 그대로였습니다.</li>
+</ul>
+<p class="lab">왜</p>
+<ul>
+<li>0:43 "세 가지 기준만 기억하시면 됩니다" 예고와 짧은 길이(4:28)가 함께 작동한 것으로 보입니다.</li>
+<li>둘 중 어느 쪽이 더 큰지는 이번 데이터로 가를 수 없습니다.</li>
+</ul>
+<p class="lab acc">적용</p>
+<ul>
+<li>4편: "두 가지 방식" 예고를 현재 약 0:42에서 0:30 안으로 당깁니다(앞 잔가지 정리).</li>
+<li>5편: 말로 한 예고가 없으니 0:15~0:25에 화면 칩으로 "① 15년 패턴 ② 시간별 공부 순서 ③ 직전용 9편"을 넣습니다.</li>
+</ul>
+<h3>4. 성과는 "조회수"가 아니라 "유효 조회·시청시간"으로 읽어야 합니다</h3>
+<p class="lab">무슨 일이 있었나</p>
+<ul>
+<li>조회수의 75~80%가 홈 피드 미리보기입니다. 조회 1건당 평균 3.5초입니다.</li>
+<li>3편: 조회 1,647 중 실제로 들어와서 본 유효 조회는 372입니다.</li>
+<li>스튜디오 "평균 시청 지속 시간"도 전체 조회가 아니라 이 실제 시청 기준으로 계산됩니다.</li>
+<li>시청 지속 곡선은 약 208명 표본입니다. 한 점마다 ±3.5%p 흔들려서, 몇 %p 차이나 2~3초 단위 오르내림은 해석하면 안 됩니다.</li>
+</ul>
+<p class="lab acc">적용</p>
+<ul>
+<li>편별 성과표는 아래 지표로 기록합니다. 조회수는 노출 규모를 보는 보조 지표로 씁니다.<ul>
+<li>유효 조회</li>
+<li>시청 시간</li>
+<li>유효 조회당 시청 시간</li>
+<li>공유</li>
+<li>같은 초 시점 유지율(10%p 이상 차이만 결론)</li>
+</ul>
+</li>
+<li>게시 후 경과 시간을 맞춰서 비교합니다. 스튜디오 일별 데이터는 미국 서부 시간 자정(한국 시간 오후 4시)에 하루가 끊겨서, "게시 후 3일치"라고 해도 게시 시각에 따라 실제로는 48~63시간으로 달라집니다.</li>
+</ul>
+<h3>5. 정리는 40초 안으로, 끝에는 최종화면 20초</h3>
+<p class="lab">무슨 일이 있었나</p>
+<ul>
+<li>3편은 엔딩화면 클릭률 0%였습니다(채널 평균 3.5%). 최종화면 요소가 없었습니다.</li>
+<li>정리 구간은 64초였고, 남은 시청자의 절반이 이 구간에서 나갔습니다.</li>
+<li>다만 정리 구간의 초당 손실은 바로 앞 구간과 같아서, 영상 끝에서 원래 생기는 감쇠도 섞여 있습니다.</li>
+</ul>
+<p class="lab acc">적용</p>
+<ul>
+<li>5편: 정리 32초 + 최종화면 20초 이미 적용</li>
+<li>4편: 최종화면 20초 추가, 엔딩 곁가지를 빼서 정리 40초 이내로</li>
+<li>3편: 지금 스튜디오에서 최종화면 요소 추가 (2편 + 「출제하는 법」)</li>
+</ul>
+<h3>6. 본론이 끝난 것처럼 들리는 안내 멘트는 정리 직전에 두지 마세요</h3>
+<p class="lab">무슨 일이 있었나</p>
+<ul>
+<li>3편 2:56 "링크로 달아두고 카드로 띄어 놓을 테니까" 이후 이탈이 커졌습니다.</li>
+<li>표본이 작아 인과는 확정할 수 없지만, 비용이 거의 안 드는 조치입니다.</li>
+</ul>
+<p class="lab acc">적용</p>
+<ul>
+<li>5편 카톡방 안내(4:58~5:20)는 한 문장으로 줄이고, 나머지는 화면 자막으로 처리합니다.</li>
+<li>안내 멘트 후에는 바로 다음 내용으로 넘어갑니다.</li>
+</ul>
+<h2>Part 2. 4편·5편 적용 체크리스트</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>4편 예열법</th>
+<th>5편 EBS 연계</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>게시 시각 (자정~새벽)</td>
+<td>☐</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>공유용 한 문장 → 제목·썸네일</td>
+<td>"예열은 작년 수능으로"</td>
+<td>"15년 동안 한 번도 안 빠졌다"</td>
+</tr>
+<tr>
+<td>제목 A/B 3안, 끝까지</td>
+<td>☐</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>0:30 안 번호 예고</td>
+<td>☐ 0:42 → 0:30 안으로</td>
+<td>☐ 화면 칩 ①②③</td>
+</tr>
+<tr>
+<td>정리 40초 이내</td>
+<td>☐ 엔딩 곁가지 재삭제</td>
+<td>✅ 32초</td>
+</tr>
+<tr>
+<td>최종화면 20초</td>
+<td>☐ 추가 필요</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>안내 멘트 위치</td>
+<td>✅ 마지막</td>
+<td>☐ 4:58~5:20 축소</td>
+</tr>
+<tr>
+<td>0:00 큰 글자</td>
+<td>☐ 콜드오픈 효과자막</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>설명란 챕터·검색 키워드</td>
+<td>☐</td>
+<td>☐ "EBS 연계 문학, 수특 수완"</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Part 3. 3편 지금 할 일</h2>
+<ul>
+<li>엔딩화면 요소 추가: 2편 + 「출제하는 법」</li>
+<li>설명란: 영상에서 약속한 "선지 자르는 규칙" 영상 링크 + 챕터(0:00 / 0:45 기준1 / 1:27 기준2 / 2:05 기준3 / 2:20 자르기 시연 / 3:25 정리)</li>
+<li>제목 A/B 테스트 끝까지 유지</li>
+</ul>
+<h2>Part 4. 상세 분석</h2>
+<h3>4-1. 게시 시각과 비교 기간</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>영상</th>
+<th>게시(한국 시간)</th>
+<th>스튜디오 집계상 첫날 길이</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>출제하는 법</td>
+<td>10/4 02:46</td>
+<td>13.2시간</td>
+</tr>
+<tr>
+<td>9평 37번</td>
+<td>10/14 15:44</td>
+<td>0.3시간</td>
+</tr>
+<tr>
+<td>2편</td>
+<td>10/22 00:52</td>
+<td>15.1시간</td>
+</tr>
+<tr>
+<td>3편</td>
+<td>10/28 09:51</td>
+<td>6.2시간</td>
+</tr>
+</tbody>
+</table></div>
+<p>스튜디오의 일별 데이터는 미국 서부 시간(태평양 시간) 기준이라 매일 한국 시간 오후 4시에 하루가 바뀝니다. 그래서 오전 9:51에 올린 3편은 집계상 "첫날"이 6시간뿐이고, 새벽에 올린 2편은 15시간입니다. 이 때문에 "게시 후 3일치" 숫자는 영상마다 실제로 48~63시간이라 공정한 비교가 아닙니다. 아래는 시간 단위 데이터를 게시 시각부터 똑같이 잘라 맞춘 값입니다.</p>
+<h3>4-2. 경과 시간 맞춘 비교</h3>
+<figure class='chart'><svg viewBox='0 0 720 360' role='img' aria-label='게시 후 경과 시간별 누적 조회'><line x1='56' x2='610' y1='316.0' y2='316.0' class='grid'/><text x='48' y='320.0' text-anchor='end' class='ax'>0</text><line x1='56' x2='610' y1='276.6' y2='276.6' class='grid'/><text x='48' y='280.6' text-anchor='end' class='ax'>1,000</text><line x1='56' x2='610' y1='237.1' y2='237.1' class='grid'/><text x='48' y='241.1' text-anchor='end' class='ax'>2,000</text><line x1='56' x2='610' y1='197.7' y2='197.7' class='grid'/><text x='48' y='201.7' text-anchor='end' class='ax'>3,000</text><line x1='56' x2='610' y1='158.3' y2='158.3' class='grid'/><text x='48' y='162.3' text-anchor='end' class='ax'>4,000</text><line x1='56' x2='610' y1='118.9' y2='118.9' class='grid'/><text x='48' y='122.9' text-anchor='end' class='ax'>5,000</text><line x1='56' x2='610' y1='79.4' y2='79.4' class='grid'/><text x='48' y='83.4' text-anchor='end' class='ax'>6,000</text><line x1='56' x2='610' y1='40.0' y2='40.0' class='grid'/><text x='48' y='44.0' text-anchor='end' class='ax'>7,000</text><text x='56.0' y='336' text-anchor='middle' class='ax'>0h</text><text x='114.3' y='336' text-anchor='middle' class='ax'>6h</text><text x='172.6' y='336' text-anchor='middle' class='ax'>12h</text><text x='289.3' y='336' text-anchor='middle' class='ax'>24h</text><text x='405.9' y='336' text-anchor='middle' class='ax'>36h</text><text x='522.5' y='336' text-anchor='middle' class='ax'>48h</text><text x='610.0' y='336' text-anchor='middle' class='ax'>57h</text><rect x='172.6' y='40' width='116.6' height='276' class='band'/><text x='230.9' y='30' text-anchor='middle' class='bandt'>12~24h 확산 구간</text><polyline points='56.0,316.0 114.3,310.4 172.6,303.2 289.3,223.8 405.9,129.1 522.5,93.3 610.0,47.8' fill='none' stroke='var(--c2)' stroke-width='2.5' stroke-linejoin='round'/><text x='618.0' y='51.8' class='lg' fill='var(--c2)'>출제하는 법 6,803</text><polyline points='56.0,316.0 114.3,309.1 172.6,303.1 289.3,219.9 405.9,200.7 522.5,185.3 610.0,175.9' fill='none' stroke='var(--c1)' stroke-width='2.5' stroke-linejoin='round'/><text x='618.0' y='179.9' class='lg' fill='var(--c1)'>2편 3,553</text><polyline points='56.0,316.0 114.3,307.3 172.6,301.7 289.3,295.8 405.9,272.0 522.5,255.1 610.0,249.9' fill='none' stroke='var(--acc)' stroke-width='4' stroke-linejoin='round'/><text x='618.0' y='253.9' class='lg' fill='var(--acc)'>3편 1,677</text><polyline points='56.0,316.0 114.3,308.9 172.6,307.0 289.3,302.8 405.9,300.3 522.5,300.0 610.0,298.6' fill='none' stroke='var(--c3)' stroke-width='2.5' stroke-linejoin='round'/><text x='618.0' y='302.6' class='lg' fill='var(--c3)'>9평 37번 441</text></svg><figcaption>게시 후 경과 시간별 누적 조회. 3편은 12시간까지 1등, 12~24시간에 멈췄습니다.</figcaption></figure>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>게시 후 57시간</th>
+<th>출제하는 법</th>
+<th>9평 37번</th>
+<th>2편</th>
+<th>3편</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>조회</td>
+<td>6,803</td>
+<td>441</td>
+<td>3,553</td>
+<td>1,677</td>
+</tr>
+<tr>
+<td>유효 조회</td>
+<td>1,549</td>
+<td>127</td>
+<td>1,008</td>
+<td>374</td>
+</tr>
+<tr>
+<td>시청 시간</td>
+<td>44.0h</td>
+<td>3.3h</td>
+<td>23.2h</td>
+<td>8.3h</td>
+</tr>
+<tr>
+<td>구독 +/-</td>
+<td>+12/-4</td>
+<td>+1/-3</td>
+<td>+6/-0</td>
+<td>+0/-3</td>
+</tr>
+<tr>
+<td>공유</td>
+<td>14</td>
+<td>2</td>
+<td>21</td>
+<td>0</td>
+</tr>
+<tr>
+<td>좋아요</td>
+<td>36</td>
+<td>6</td>
+<td>39</td>
+<td>18</td>
+</tr>
+<tr>
+<td>좋아요 / 유효조회</td>
+<td>2.3%</td>
+<td>4.7%</td>
+<td>3.9%</td>
+<td>4.8%</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>누적 조회</th>
+<th>6h</th>
+<th>12h</th>
+<th>24h</th>
+<th>36h</th>
+<th>48h</th>
+<th>57h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>출제하는 법</td>
+<td>142</td>
+<td>324</td>
+<td>2,338</td>
+<td>4,740</td>
+<td>5,648</td>
+<td>6,803</td>
+</tr>
+<tr>
+<td>9평 37번</td>
+<td>179</td>
+<td>228</td>
+<td>335</td>
+<td>399</td>
+<td>407</td>
+<td>441</td>
+</tr>
+<tr>
+<td>2편</td>
+<td>176</td>
+<td>326</td>
+<td>2,437</td>
+<td>2,925</td>
+<td>3,314</td>
+<td>3,553</td>
+</tr>
+<tr>
+<td>3편</td>
+<td>221</td>
+<td><strong>362</strong></td>
+<td><strong>512</strong></td>
+<td>1,117</td>
+<td>1,544</td>
+<td>1,677</td>
+</tr>
+</tbody>
+</table></div>
+<p>3편 시간별 흐름(KST):</p>
+<ul>
+<li>10/28 10~16시: 시간당 26~61회</li>
+<li>10/28 17~20시: 시간당 11~22회 (첫날 저녁 반응 없음)</li>
+<li>10/29 새벽~오후 1시: 시간당 1~16회</li>
+<li><strong>10/29 14시~10/30 01시: 홈 피드 재확산.</strong> 최고 시간당 126회, 전부 탐색 기능 유입, 유효조회 비율 약 14%</li>
+<li>10/30: 시간당 10~35회로 감쇠 중</li>
+</ul>
+<h3>4-3. 조회수의 구성 (재생 위치, 스튜디오 집계 3일)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>영상</th>
+<th>조회</th>
+<th>홈 피드 조회</th>
+<th>홈 피드 조회당 시청</th>
+<th>시청 페이지 조회</th>
+<th>유효 조회</th>
+<th>유효조회당 시청</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>출제하는 법</td>
+<td>8,112</td>
+<td>6,489</td>
+<td>4.1초</td>
+<td>1,621</td>
+<td>1,799</td>
+<td>약 102초</td>
+</tr>
+<tr>
+<td>9평 37번</td>
+<td>409</td>
+<td>289</td>
+<td>2.2초</td>
+<td>118</td>
+<td>116</td>
+<td>약 93초</td>
+</tr>
+<tr>
+<td>2편</td>
+<td>4,246</td>
+<td>3,124</td>
+<td>3.5초</td>
+<td>1,122</td>
+<td>1,167</td>
+<td>약 81초</td>
+</tr>
+<tr>
+<td>3편</td>
+<td>1,647</td>
+<td>1,283</td>
+<td>3.5초</td>
+<td>364</td>
+<td>372</td>
+<td>약 79초</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>"평균 시청 지속 시간"의 분모는 전체 조회가 아니라 실제 시청 건수입니다(3편 약 393건).</li>
+<li>그래서 홈 피드 0:51 / 시청 페이지 1:20 / 전체 1:16이 산술상 안 맞아 보입니다. 데이터 오류가 아닙니다.</li>
+<li>실제로 들어온 사람의 시청 시간은 3편 79초, 2편 81초로 같습니다. 같은 4:28 안에서 본 양은 3편이 약 1.4배입니다(곡선 면적 기준).</li>
+<li>정리하면, 평균 조회율이 2배(28.1% vs 13.8%)인 이유는 <strong>길이 효과 ×1.4, 구성 효과 ×1.4로 반반</strong>입니다.</li>
+</ul>
+<h3>4-4. 시청 지속 곡선</h3>
+<figure class='chart'><svg viewBox='0 0 720 360' role='img' aria-label='같은 초 시점 유지율'><line x1='56' x2='610' y1='316.0' y2='316.0' class='grid'/><text x='48' y='320.0' text-anchor='end' class='ax'>0%</text><line x1='56' x2='610' y1='260.8' y2='260.8' class='grid'/><text x='48' y='264.8' text-anchor='end' class='ax'>20%</text><line x1='56' x2='610' y1='205.6' y2='205.6' class='grid'/><text x='48' y='209.6' text-anchor='end' class='ax'>40%</text><line x1='56' x2='610' y1='150.4' y2='150.4' class='grid'/><text x='48' y='154.4' text-anchor='end' class='ax'>60%</text><line x1='56' x2='610' y1='95.2' y2='95.2' class='grid'/><text x='48' y='99.2' text-anchor='end' class='ax'>80%</text><line x1='56' x2='610' y1='40.0' y2='40.0' class='grid'/><text x='48' y='44.0' text-anchor='end' class='ax'>100%</text><text x='56.0' y='336' text-anchor='middle' class='ax'>0:00</text><text x='148.3' y='336' text-anchor='middle' class='ax'>0:30</text><text x='240.7' y='336' text-anchor='middle' class='ax'>1:00</text><text x='333.0' y='336' text-anchor='middle' class='ax'>1:30</text><text x='425.3' y='336' text-anchor='middle' class='ax'>2:00</text><text x='610.0' y='336' text-anchor='middle' class='ax'>3:00</text><rect x='148.3' y='40' width='277.0' height='276' class='band'/><text x='286.8' y='30' text-anchor='middle' class='bandt'>0:30~2:00 확실한 개선 구간</text><polyline points='56.0,40.0 65.2,97.7 71.4,123.1 86.8,149.6 102.2,165.0 117.6,172.5 148.3,192.4 194.5,219.4 240.7,224.9 333.0,224.9 425.3,232.1 610.0,241.8' fill='none' stroke='var(--c2)' stroke-width='2.5' stroke-linejoin='round'/><text x='618.0' y='245.8' class='lg' fill='var(--c2)'>출제하는 법 26.9%</text><polyline points='56.0,40.0 65.2,68.2 71.4,99.6 86.8,141.8 102.2,162.5 117.6,176.6 148.3,200.9 194.5,218.3 240.7,227.1 333.0,245.9 425.3,247.0 610.0,258.9' fill='none' stroke='var(--c3)' stroke-width='2.5' stroke-linejoin='round'/><text x='618.0' y='258.9' class='lg' fill='var(--c3)'>9평 37번 20.7%</text><polyline points='56.0,40.0 65.2,81.7 71.4,101.5 86.8,135.5 102.2,158.4 117.6,177.4 148.3,199.0 194.5,221.9 240.7,234.0 333.0,249.2 425.3,253.6 610.0,260.0' fill='none' stroke='var(--c1)' stroke-width='2.5' stroke-linejoin='round'/><text x='618.0' y='270.0' class='lg' fill='var(--c1)'>2편 20.3%</text><polyline points='56.0,40.0 65.2,84.4 71.4,105.1 86.8,131.1 102.2,154.8 117.6,163.1 148.3,179.4 194.5,172.8 240.7,178.3 333.0,189.0 425.3,202.6 610.0,226.9' fill='none' stroke='var(--acc)' stroke-width='4' stroke-linejoin='round'/><text x='618.0' y='230.9' class='lg' fill='var(--acc)'>3편 32.3%</text></svg><figcaption>같은 초 시점 유지율(재생 시작 대비). 0:10은 차이 없고, 0:30 이후 3편이 크게 앞섭니다.</figcaption></figure>
+<ul>
+<li>표본은 약 208명입니다. 곡선 값이 전부 1/208 단위로 떨어집니다(98.56% = 205/208).</li>
+<li>50% 부근에서 표준오차 약 ±3.5%p, 95% 구간 ±7%p입니다.</li>
+<li>곡선 평균 ÷ 평균 조회율 비율이 영상마다 1.33~1.44로 비슷해서, 같은 초 시점 비교는 유효합니다.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>시점</th>
+<th>출제하는 법</th>
+<th>9평 37번</th>
+<th>2편</th>
+<th>3편</th>
+<th>판단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:10</td>
+<td>60.3</td>
+<td>63.1</td>
+<td>65.4</td>
+<td>67.0</td>
+<td>노이즈 범위</td>
+</tr>
+<tr>
+<td>0:30</td>
+<td>44.8</td>
+<td>41.7</td>
+<td>42.4</td>
+<td>49.5</td>
+<td>경계선(약 2σ)</td>
+</tr>
+<tr>
+<td>1:00</td>
+<td>33.0</td>
+<td>32.2</td>
+<td>29.7</td>
+<td>49.9</td>
+<td><strong>확실한 개선</strong></td>
+</tr>
+<tr>
+<td>2:00</td>
+<td>30.4</td>
+<td>25.0</td>
+<td>22.6</td>
+<td>41.1</td>
+<td><strong>확실한 개선</strong></td>
+</tr>
+<tr>
+<td>3:00</td>
+<td>26.9</td>
+<td>20.7</td>
+<td>20.3</td>
+<td>32.3</td>
+<td>개선</td>
+</tr>
+</tbody>
+</table></div>
+<p>구간별 해석(3편, 남은 시청자 대비 손실). 큰 흐름만 신뢰하고 1~5%p 오르내림은 해석하지 않습니다.</p>
+<ul>
+<li>훅 0:00~0:13: -37%</li>
+<li>야구 비유: -20%</li>
+<li>상황 설정·"세 가지 기준" 예고: +4%</li>
+<li>기준 1: -12% / 기준 2: -14%</li>
+<li>기준 3: -14%</li>
+<li>자르기 시연: -6%</li>
+<li>링크 안내: -15%</li>
+<li>정리: -50%</li>
+</ul>
+<h3>4-5. 원 보고서(진성, 10/30 19시) 항목별 검증</h3>
+<p><strong>원천과 일치</strong></p>
+<ul>
+<li>일별 조회·노출·CTR</li>
+<li>노출당 시청 시간 3.5초</li>
+<li>구독 +0/-3, 공유 0</li>
+<li>시청 지속 곡선 값</li>
+<li>「출제하는 법」 1일차 노출 1,514는 3편 1일차와 우연히 같은 실제 값</li>
+</ul>
+<p><strong>수정이 필요한 해석</strong></p>
+<ul>
+<li>"3일째 가속, 아직 상승세": 스튜디오 집계상 첫날이 6시간뿐이라 생긴 착시입니다. 실제로는 2일차 오후 한 번 재확산 후 감쇠 중입니다.</li>
+<li>"실시간 48시간이 3일 합의 83% → 최근에 몰림": 48시간 창이 영상 수명의 84%를 덮어서 당연한 값입니다.</li>
+<li>"조회율 2배의 대부분은 길이 효과": 길이와 구성이 반반입니다.</li>
+<li>0:10 개선(+1.6%p), 구간별 +2~5%p 회복과 되감기 흔적: 208명 표본의 노이즈 범위입니다.</li>
+<li>추천 출처 비율(조회 11회), 검색 유입 조회율 69%(5명): 표본이 너무 작습니다.</li>
+<li>구독 0: 기대값 약 2.2명이라 우연일 확률이 11%입니다. "처음"이라고 강조할 정도는 아닙니다.</li>
+<li><strong>공유 0: 우연일 확률 0.04%로 진짜 신호입니다.</strong></li>
+<li>"기존 시청자 위주 소비": 순 시청자 미집계라 근거가 약합니다. 구독자 시청 비중은 12시간 48.5% → 57시간 28.8%로 오히려 바깥으로 퍼지는 중입니다.</li>
+</ul>
+<h3>4-6. 가설 검증표 최종 판정</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>가설</th>
+<th>판정</th>
+<th>근거</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>콜드오픈 → 초반 이탈 감소</td>
+<td>판정 불가</td>
+<td>0:10 차이가 노이즈 범위입니다. 오프닝도 결론 티저가 아니라 의도된 "시간 싸움" 훅이었습니다</td>
+</tr>
+<tr>
+<td>2</td>
+<td>맥락 장면 → 문제 진입 유지</td>
+<td>⚠</td>
+<td>1:00 개선은 확실하지만, 맥락 장면 효과와 번호 예고 효과를 못 가릅니다</td>
+</tr>
+<tr>
+<td>3</td>
+<td>배너 제거 → 인트로 끝 이탈 감소</td>
+<td>⚠</td>
+<td>결과는 좋지만 같은 구간에 예고가 겹칩니다</td>
+</tr>
+<tr>
+<td>4</td>
+<td>정리 40초 이내</td>
+<td>❌</td>
+<td>정리 64초. 이 구간에서 남은 시청자 절반 이탈</td>
+</tr>
+<tr>
+<td>5</td>
+<td>최종화면 20초</td>
+<td>❌</td>
+<td>최종화면 요소 없음, 엔딩화면 클릭 0%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>근거 시연 + 시간 배지</td>
+<td>판정 불가</td>
+<td>구간 차이가 1~2명 수준입니다</td>
+</tr>
+<tr>
+<td>7</td>
+<td>전체</td>
+<td>영상 안 ⭕ / 확산 ❌</td>
+<td>1:00 이후 유지율은 확실히 개선됐고, 12~24시간 확산에서 실패했습니다</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4-7. 기타</h3>
+<ul>
+<li>제목 A/B(시청 시간 점유율): 현재 제목 28.8% / 질문형 36.1% / 숫자·D-day형 35.1%. 진행 중이고 원천 미확인입니다.</li>
+<li>채널 28일: 구독 +88 / -203. 업로드일마다 구독 취소가 몰리는 패턴이 3번 연속입니다(-25 / -21 / -17).</li>
+<li>기준값 정정: 2편 "0:10 = 62.2%"는 실제로 0:11 지점 값이었습니다.</li>
+</ul>
+<h2>부록: 원천 데이터 출처</h2>
+<ul>
+<li>스튜디오 yta_web/join 쿼리<ul>
+<li>측정항목: EXTERNAL_VIEWS, ENGAGED_VIEWS, EXTERNAL_WATCH_TIME, AVERAGE_WATCH_TIME, AVERAGE_WATCH_PERCENTAGE, VIDEO_THUMBNAIL_IMPRESSIONS(_VTR), SUBSCRIBERS_GAINED/LOST, SHARINGS, RATINGS_LIKES, COMMENTS</li>
+<li>차원: DAY, HOUR, PLAYBACK_LOCATION_TYPE, TRAFFIC_SOURCE_TYPE</li>
+</ul>
+</li>
+<li>시청 지속 곡선: yta_web/get_cards의 audienceRetentionHighlightsCardData</li>
+<li>시간별 노출은 3편만 제공되고, 예전 영상은 0으로 나옵니다.</li>
+</ul></main></body></html>
