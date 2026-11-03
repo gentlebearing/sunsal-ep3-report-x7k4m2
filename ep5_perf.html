@@ -1,0 +1,378 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>순살국어 5편 성과</title>
+<meta name="description" content="5편 EBS 문학 게시 후 39시간 성과와 포장 교체안">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--bg:#f7f2e6;--fg:#1b1f2a;--fg2:#5e6270;--line:#e4dccb;--card:#fffdf8;--acc:#e0a400;--sig:#ffc21a;--c1:#4d7fd6;--c2:#8a8f9c;--c3:#c9c3b4;--good:#1f8a5a;--bad:#d4493b;--th:#f1ead9;--grid:#e8e1d1;--band:rgba(255,194,26,.16)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14171f;--fg:#ece9e1;--fg2:#a5a8b2;--line:#2c313d;--card:#1c2029;--acc:#ffc21a;--sig:#ffc21a;--c1:#79a6ff;--c2:#9aa0ad;--c3:#4a4f5c;--good:#4fc48b;--bad:#ff7a6b;--th:#232834;--grid:#2a2f3a;--band:rgba(255,194,26,.12)}}
+:root[data-theme=dark]{--bg:#14171f;--fg:#ece9e1;--fg2:#a5a8b2;--line:#2c313d;--card:#1c2029;--acc:#ffc21a;--sig:#ffc21a;--c1:#79a6ff;--c2:#9aa0ad;--c3:#4a4f5c;--good:#4fc48b;--bad:#ff7a6b;--th:#232834;--grid:#2a2f3a;--band:rgba(255,194,26,.12)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;font-size:16.5px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+.hero{background:#1b1f2a;color:#fbf6ea;padding:72px 24px 64px}
+.hero .in{max-width:860px;margin:0 auto}
+.eyebrow{display:inline-block;background:#ffc21a;color:#1b1f2a;font-weight:800;font-size:13px;letter-spacing:.04em;padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.25;letter-spacing:-.03em;margin:0 0 14px;font-weight:800}
+.hero h1 em{font-style:normal;color:#ffc21a}
+.hero p{color:#b9bccb;margin:0;font-size:15px}
+main{max-width:860px;margin:0 auto;padding:40px 24px 120px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:8px 0 22px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c3)}
+.kpi.up::before{background:var(--good)} .kpi.down::before{background:var(--bad)} .kpi.maybe::before{background:var(--sig)}
+.kl{font-size:13.5px;color:var(--fg2);font-weight:600} .kl small{font-weight:500;opacity:.8}
+.kv{display:flex;align-items:baseline;gap:8px;margin:6px 0 8px;flex-wrap:wrap}
+.old{color:var(--fg2);font-size:14px} .arr{color:var(--fg2)} .new{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.kb{display:inline-block;font-size:12.5px;font-weight:800;padding:3px 10px;border-radius:999px;background:var(--th)}
+.up .kb{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.down .kb{background:color-mix(in srgb,var(--bad) 16%,transparent);color:var(--bad)}
+.maybe .kb{background:color-mix(in srgb,var(--sig) 28%,transparent)}
+.kn{font-size:13px;color:var(--fg2);margin-top:8px;line-height:1.55}
+.oneline{background:#ffc21a;color:#1b1f2a;border-radius:18px;padding:22px 26px;font-size:clamp(19px,3vw,24px);font-weight:800;line-height:1.45;letter-spacing:-.02em;margin:6px 0 34px}
+.oneline span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.05em;opacity:.7;margin-bottom:4px}
+h2{font-size:25px;letter-spacing:-.02em;margin:72px 0 18px;padding-top:24px;border-top:2px solid var(--fg);font-weight:800}
+h3{font-size:19px;margin:40px 0 12px;font-weight:800;letter-spacing:-.01em}
+h3.tag{display:inline-block;padding:6px 14px;border-radius:10px;font-size:16px;margin:28px 0 10px}
+h3.tag span{font-weight:600;opacity:.75;font-size:13px;margin-left:6px}
+h3.good{background:color-mix(in srgb,var(--good) 15%,transparent);color:var(--good)}
+h3.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+h3.next{background:#ffc21a;color:#1b1f2a}
+p{margin:0 0 14px} strong{font-weight:800}
+p.lab{font-size:12.5px;font-weight:800;letter-spacing:.05em;color:var(--fg2);margin:18px 0 6px;text-transform:uppercase}
+p.lab.acc{color:var(--acc)}
+ul,ol{padding-left:22px;margin:0 0 18px} li{margin:7px 0} li::marker{color:var(--acc);font-weight:800}
+.tw{overflow-x:auto;margin:18px 0 26px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.6}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line)}
+th{background:var(--th);font-weight:800;white-space:nowrap} tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700} svg .pt{font-size:13px;font-weight:700;fill:var(--fg)}
+figure.chart{margin:22px 0 30px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 10px 12px}
+figure svg{width:100%;height:auto;display:block;font-family:Pretendard,sans-serif}
+figcaption{color:var(--fg2);font-size:13px;margin-top:8px;text-align:center;padding:0 10px}
+svg .grid{stroke:var(--grid);stroke-width:1} svg .ax{fill:var(--fg2);font-size:12px}
+svg .lg{font-size:13px;font-weight:800} svg .band{fill:var(--band)} svg .bandt{fill:var(--fg2);font-size:12px;font-weight:700}
+hr{border:0;border-top:1px solid var(--line);margin:48px 0}
+code{font-size:13px;background:var(--th);padding:1px 6px;border-radius:6px}
+@media (max-width:560px){body{font-size:15.5px} .hero{padding:52px 16px 44px} main{padding:28px 16px 80px} th,td{padding:9px 10px;font-size:13.5px}}
+</style></head><body>
+<header class="hero"><div class="in"><div class="eyebrow">순살국어 · 5편 성과 (게시 후 39시간)</div>
+<h1>「EBS 문학, 고전부터 끝내야 하는 이유」<br><em>본 사람은 봤고, 홈에서 안 눌렀다</em></h1>
+<p>게시 후 약 39시간 · YouTube 스튜디오 + 같은 주제 다른 채널 30여 개 · 2026년 11월 3일</p></div></header>
+<main><h2>한눈에 보기</h2>
+<div class="kpis"><div class="kpi down"><div class="kl">홈 피드 클릭률</div><div class="kv"><span class="old">지난 편 3.53%</span><span class="arr">→</span><span class="new">2.43%</span></div><div class="kb">최근 5편 중 최저</div><div class="kn">±1%p 오차를 감안해도 가장 낮은 축</div></div><div class="kpi down"><div class="kl">홈 노출 <small>39시간</small></div><div class="kv"><span class="old">지난 편 5,699</span><span class="arr">→</span><span class="new">824</span></div><div class="kb">약 1/7</div><div class="kn">게시 6~7시간 만에 확산 중단</div></div><div class="kpi down"><div class="kl">유효 조회수 <small>39시간</small></div><div class="kv"><span class="old">지난 편 313</span><span class="arr">→</span><span class="new">84</span></div><div class="kb">약 1/4</div><div class="kn">실제로 본 사람 수</div></div><div class="kpi flat"><div class="kl">평균 조회율</div><div class="kv"><span class="old">지난 편 28.8%</span><span class="arr">→</span><span class="new">28.3%</span></div><div class="kb">차이 없음</div><div class="kn">본 사람은 평소처럼 봄</div></div><div class="kpi flat"><div class="kl">0:30 유지율</div><div class="kv"><span class="old">지난 편 49.5%</span><span class="arr">→</span><span class="new">49%</span></div><div class="kb">차이 없음</div><div class="kn">스튜디오 판정: 일반적인 실적</div></div><div class="kpi flat"><div class="kl">구독 피드 클릭률</div><div class="kv"><span class="old">지난 편 2.74%</span><span class="arr">→</span><span class="new">2.97%</span></div><div class="kb">평소 범위</div><div class="kn">구독자 반응은 정상</div></div></div>
+<div class="oneline"><span>한 줄 요약</span>본 사람 기준으로 영상은 문제가 없었고, 포장이 문제였다.<br>제목·썸네일에 "손에 쥘 것"이 없어 홈에서 안 눌렸다.</div>
+<h3 class="tag good">잘한 점</h3>
+<ol>
+<li><strong>본 사람은 평소처럼 봤습니다.</strong> 조회 대비 유효조회 비율이 23.5%로 지난 편(23.0%)·출제하는 법(22.8%)과 같고, 0:30 유지율 49%는 스튜디오 기준 "일반적인 실적"입니다.</li>
+<li><strong>구독자 반응은 정상입니다.</strong> 구독 피드 클릭률 2.97%로 매 편 범위(2.6~3.8%) 안이고, 지난 편보다 오히려 높습니다.</li>
+<li><strong>주제 수요는 살아 있습니다.</strong> 같은 주 다른 채널의 EBS 문학·고전시가 영상이 며칠 만에 수천~수만 회를 기록했습니다. 고른 주제가 틀린 것은 아닙니다.</li>
+</ol>
+<h3 class="tag bad">망한 원인</h3>
+<ol>
+<li><strong>홈 화면에서 처음 보는 시청자가 누르지 않았습니다.</strong> 홈 피드 클릭률 2.43%로 최근 5편 중 가장 낮고, 홈 노출은 824회에서 멈췄습니다(잘 된 편은 1만~1.8만 회). 홈 노출은 게시 후 6~7시간 만에 사실상 꺼졌습니다.</li>
+<li><strong>제목에 "손에 쥘 것"이 없었습니다.</strong> 「~하는 이유」는 설득형이라 결과물이 보이지 않습니다. 같은 시기 잘 된 영상들은 "이 N작품", "연계 예상", "몰아보기"처럼 무엇을 얻는지가 제목에 보입니다.</li>
+<li><strong>썸네일에 결론이 이미 다 적혀 있었습니다.</strong> 「시간 없으면 무조건 '고전'부터」 + 분할 + 라벨 4개 구성이라, 개념을 알아야 읽히고 답을 이미 줘서 눌러 볼 이유가 없습니다.</li>
+<li><strong>영상의 가장 센 약속을 포장에 쓰지 않았습니다.</strong> 영상 첫 5초는 "올해 연계로 나올 문학 작품은 어느 정도 정해져 있다", "시간 없는 분들 위해 작품을 골라뒀다"입니다. 이 결과물형 약속이 제목·썸네일에는 없었습니다.</li>
+</ol>
+<h3 class="tag next">개선할 점 <span>다음 편에 바로</span></h3>
+<ol>
+<li><strong>제목·썸네일을 촬영 전에 정합니다.</strong> 대본 단계에서 포장 문장을 먼저 확정하고, 그 약속을 영상 첫 5초 안에 말하게 합니다.</li>
+<li><strong>결과물이 보이는 제목.</strong> 숫자 + 손에 쥘 것(이 N개, 리스트, 순서). 「~하는 이유」, 「~하는 법」 단독은 피합니다.</li>
+<li><strong>3초에 읽히는 한 줄 썸네일.</strong> 분할·라벨을 걷어내고, 결론은 다 적지 않고 질문이나 반전으로 남깁니다.</li>
+<li><strong>게시 후 3~6시간에 홈 클릭률을 확인합니다.</strong> 3.5% 아래면 그 자리에서 썸네일을 교체합니다. 5편은 7시간째에 확산이 꺼졌습니다.</li>
+</ol>
+<h2>Part 1. 5편 제목·썸네일 교체안</h2>
+<p>수능이 가까워 하루가 아깝습니다. 오늘 바로 바꾸는 것을 권합니다. 게시 3일째라 홈 재시험은 크게 기대하기 어렵지만, 손해 볼 것은 없습니다.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>안</th>
+<th>제목</th>
+<th>썸네일</th>
+<th>노리는 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A (추천)</strong></td>
+<td>수능 D-16, EBS 고전은 이 5작품부터 보세요</td>
+<td>크림 카드 5장에 작품명: 규원가 / 운영전 / 창선감의록 / 금방울전 / 적벽가 + 위에 한 줄 「시간 없으면 여기부터」</td>
+<td>결과물형. 영상 속 선정 작품 그대로라 약속과 내용이 일치</td>
+</tr>
+<tr>
+<td>B</td>
+<td>고전시가·고전소설, 수능에서 한 번도 안 빠졌습니다</td>
+<td>영상 0:15 어두운 점 그래프 화면(고전 두 줄만 노랗게 빛나는 장면) + 「15년 연속」</td>
+<td>남에게 보내고 싶은 단정 한 문장, 그림 자체가 증거</td>
+</tr>
+<tr>
+<td>C</td>
+<td>EBS 수특·수완 166편, 시간 없으면 어디까지 볼까?</td>
+<td>책 두 권 + 「166 → 5」</td>
+<td>학생 질문형 + 결론 약속</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>A/B 테스트는 A와 B 두 개만, 최소 7일.</strong> 지금 노출 규모(홈 하루 약 800회)에서 세 개로 나누면 안별로 몇백 회뿐이라 차이가 나와도 판정이 안 됩니다.</li>
+<li><strong>설명란 첫 줄에 작품 5개 이름을 적습니다.</strong> 검색 유입이 거의 없는 채널이라 작품명 검색이 새 입구가 될 수 있습니다.</li>
+<li><strong>"올해 출제 후보"류 제목은 쓰지 않습니다.</strong> 영상 안에서 "이 작품이 나온다는 얘기로 받아들이면 안 된다"고 직접 말하기 때문에, 제목과 내용이 부딪히고 댓글 반발 위험이 있습니다.</li>
+<li><strong>'15년 연속' 표현은 확인이 필요합니다.</strong> 12학년도는 원자료에 연계 표시가 없어 영상에서는 연계로 처리했습니다. 제목에 쓰려면 그 한 해를 먼저 확인하거나 "최근 14년"으로 씁니다.</li>
+</ul>
+<h2>Part 2. 원래 진단 검토</h2>
+<h3>동의하는 부분</h3>
+<ul>
+<li><strong>편집·내용이 아니라 클릭 단계에서 막혔다:</strong> 맞습니다. 유효조회 비율, 구독 피드 반응 모두 평소 범위입니다.</li>
+<li><strong>썸네일 정보 과다:</strong> 맞습니다. 여기에 더해 썸네일에 결론이 다 적혀 있어 궁금증이 생기지 않습니다.</li>
+<li><strong>게시 시각은 주원인이 아니다:</strong> 맞습니다. 홈 노출이 게시 직후 18~23시, 학생들이 가장 많이 보는 시간에 시간당 40~69회 시험을 받고도 꺼졌습니다. 좋은 시간에 시험을 보고 떨어진 것입니다.</li>
+</ul>
+<h3>다르게 보는 부분</h3>
+<ul>
+<li><strong>A/B 테스트 조기 중단의 영향은 크지 않았습니다.</strong> 노출이 적어서 끝까지 돌렸어도 세 안 사이 차이를 판정하기 어려웠습니다. 다만 앞으로는 두 안을 7일 돌리는 것이 맞습니다.</li>
+<li><strong>최종 화면 요소 추가 제안:</strong> 최종 화면 20초 기준은 채널 운영에서 쓰지 않기로 정했습니다. 엔딩화면 클릭률 0%는 사실이지만, 이번 성과를 가른 요인은 아닙니다.</li>
+</ul>
+<h3>보고서가 놓친 부분</h3>
+<ul>
+<li><strong>홈 클릭률만으로는 확산이 설명되지 않습니다.</strong> 9평 37번 편은 홈 클릭률 4.40%로 손절 편(3.53%)보다 높았는데도 홈 노출 637회에서 멈췄습니다. 클릭률이 낮으면 꺼지지만, 높다고 반드시 퍼지는 것도 아닙니다. 첫 노출 대상(주제의 폭)이 먼저 걸러지는 것으로 보입니다. 아래 그래프 참고.</li>
+<li><strong>"유지율 정상"은 구독자 표본입니다.</strong> 시청 시간의 91%가 구독자, 순 시청자 56명입니다. 처음 보는 시청자에게 영상이 먹히는지는 아직 확인되지 않았습니다.</li>
+<li><strong>숫자 차이는 오차를 같이 봐야 합니다.</strong> 5편 홈 클릭률 2.43%는 노출이 824회뿐이라 ±1%p 정도 흔들립니다. "가장 낮다"는 결론은 유지되지만 9평 37번 편(±1.6%p)과의 차이는 단정하기 어렵습니다.</li>
+<li><strong>편 번호가 내부 기록과 다릅니다.</strong> 보고서의 "4편 손절"은 내부 기록상 3편 「풀지 말지 결정하는 법」입니다. 공유 시 번호를 맞추는 것이 좋습니다.</li>
+</ul>
+<h2>Part 3. 다음 편 포장 기준</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>기준</th>
+<th>근거 강도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>제목·썸네일은 촬영 전에 확정, 그 약속을 첫 5초에 말한다</td>
+<td>5편 관찰</td>
+</tr>
+<tr>
+<td>2</td>
+<td>제목에 결과물(이 N개·리스트·순서)이 보이게. 「~하는 이유」 단독 금지</td>
+<td>5편 + 타 채널 30여 개</td>
+</tr>
+<tr>
+<td>3</td>
+<td>썸네일은 3초에 읽히는 한 줄. 분할·라벨 금지, 결론을 다 적지 않는다</td>
+<td>5편 vs 잘 된 두 편</td>
+</tr>
+<tr>
+<td>4</td>
+<td>제목·썸네일의 약속은 영상 내용과 일치(출제 예측·적중으로 포장하지 않기)</td>
+<td>신뢰</td>
+</tr>
+<tr>
+<td>5</td>
+<td>주제가 좁으면 수험생 전체 문제로 한 번 감싼다</td>
+<td>9평 37번·5편 공통</td>
+</tr>
+<tr>
+<td>6</td>
+<td>게시 후 3~6시간 홈 클릭률 확인, 3.5% 미만이면 썸네일 즉시 교체</td>
+<td>5편 7시간 소멸</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A/B 테스트는 두 안, 7일</td>
+<td>노출 규모</td>
+</tr>
+<tr>
+<td>8</td>
+<td>자정~새벽 게시는 계속 시험(이번 편으로는 판정 불가)</td>
+<td>이전 편 관찰</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Part 4. 상세 데이터</h2>
+<h3>4-1. 최근 5편, 게시 후 39시간 같은 시점 비교</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>영상</th>
+<th>조회수</th>
+<th>노출수</th>
+<th>클릭률</th>
+<th>유효조회</th>
+<th>평균 조회율</th>
+<th>구독</th>
+<th>공유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EBS 문학 고전 (11/1)</strong></td>
+<td><strong>357</strong></td>
+<td><strong>2,417</strong></td>
+<td><strong>2.69%</strong></td>
+<td>84</td>
+<td>28.3%</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>풀지 말지 결정하는 법 (10/28)</td>
+<td>1,360</td>
+<td>7,136</td>
+<td>3.41%</td>
+<td>313</td>
+<td>28.8%</td>
+<td>-3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>비문학 이해 필요 없음 (10/22)</td>
+<td>3,017</td>
+<td>12,253</td>
+<td>5.49%</td>
+<td>842</td>
+<td>14.5%</td>
+<td>+6</td>
+<td>21</td>
+</tr>
+<tr>
+<td>9평 37번 (10/14)</td>
+<td>401</td>
+<td>3,282</td>
+<td>2.47%</td>
+<td>113</td>
+<td>14.7%</td>
+<td>-2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>출제하는 법 (10/4)</td>
+<td>5,122</td>
+<td>21,547</td>
+<td>4.71%</td>
+<td>1,169</td>
+<td>17.4%</td>
+<td>+6</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<h3>4-2. 홈 피드 vs 구독 피드</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>영상</th>
+<th>홈 노출</th>
+<th>홈 클릭률</th>
+<th>구독 피드 노출</th>
+<th>구독 피드 클릭률</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EBS 문학 고전</strong></td>
+<td><strong>824</strong></td>
+<td><strong>2.43%</strong></td>
+<td>1,178</td>
+<td>2.97%</td>
+</tr>
+<tr>
+<td>풀지 말지</td>
+<td>5,699</td>
+<td>3.53%</td>
+<td>1,204</td>
+<td>2.74%</td>
+</tr>
+<tr>
+<td>비문학 이해 필요 없음</td>
+<td>9,719</td>
+<td>5.71%</td>
+<td>1,620</td>
+<td>3.77%</td>
+</tr>
+<tr>
+<td>9평 37번</td>
+<td>637</td>
+<td>4.40%</td>
+<td>1,034</td>
+<td>2.61%</td>
+</tr>
+<tr>
+<td>출제하는 법</td>
+<td>18,045</td>
+<td>4.90%</td>
+<td>1,789</td>
+<td>3.58%</td>
+</tr>
+</tbody>
+</table></div>
+<figure class='chart'><svg viewBox='0 0 720 380' role='img' aria-label='홈 클릭률과 홈 노출'><line x1='64' x2='690' y1='301.1' y2='301.1' class='grid'/><text x='56' y='305.1' text-anchor='end' class='ax'>500</text><line x1='64' x2='690' y1='257.5' y2='257.5' class='grid'/><text x='56' y='261.5' text-anchor='end' class='ax'>1,000</text><line x1='64' x2='690' y1='213.9' y2='213.9' class='grid'/><text x='56' y='217.9' text-anchor='end' class='ax'>2,000</text><line x1='64' x2='690' y1='156.1' y2='156.1' class='grid'/><text x='56' y='160.1' text-anchor='end' class='ax'>5,000</text><line x1='64' x2='690' y1='112.5' y2='112.5' class='grid'/><text x='56' y='116.5' text-anchor='end' class='ax'>10,000</text><line x1='64' x2='690' y1='68.9' y2='68.9' class='grid'/><text x='56' y='72.9' text-anchor='end' class='ax'>20,000</text><text x='64.0' y='350' text-anchor='middle' class='ax'>2%</text><text x='203.1' y='350' text-anchor='middle' class='ax'>3%</text><text x='342.2' y='350' text-anchor='middle' class='ax'>4%</text><text x='481.3' y='350' text-anchor='middle' class='ax'>5%</text><text x='620.4' y='350' text-anchor='middle' class='ax'>6%</text><text x='377.0' y='374' text-anchor='middle' class='ax'>홈 피드 클릭률</text><text x='14' y='26' class='ax'>홈 노출(로그)</text><rect x='64.0' y='257.5' width='361.7' height='43.6' class='band'/><text x='244.8' y='295.1' text-anchor='middle' class='bandt'>홈 시험 탈락 구간</text><circle cx='123.8' cy='269.7' r='9' fill='var(--acc)'/><text x='135.8' y='273.7' text-anchor='start' class='pt'>이번 편 (EBS 문학) 2.43% · 824</text><circle cx='276.8' cy='147.9' r='7' fill='var(--c1)'/><text x='288.8' y='151.9' text-anchor='start' class='pt'>풀지 말지 3.53% · 5,699</text><circle cx='580.1' cy='114.3' r='7' fill='var(--c1)'/><text x='568.1' y='118.3' text-anchor='end' class='pt'>비문학 이해 필요 없음 5.71% · 9,719</text><circle cx='397.9' cy='285.9' r='7' fill='var(--c1)'/><text x='409.9' y='289.9' text-anchor='start' class='pt'>9평 37번 4.4% · 637</text><circle cx='467.4' cy='75.3' r='7' fill='var(--c1)'/><text x='455.4' y='79.3' text-anchor='end' class='pt'>출제하는 법 4.9% · 18,045</text></svg><figcaption>홈 클릭률이 낮으면 노출이 꺼지지만(이번 편), 9평 37번처럼 클릭률이 높아도 노출이 안 열린 경우가 있습니다. 주제 폭이 먼저 걸러지는 것으로 보입니다.</figcaption></figure>
+<p>구독 피드 노출은 매 편 1~1.8천 회로 거의 같습니다. 성패는 홈 노출(637~18,045회, 약 30배 차이)이 갈랐고, 조회수가 그대로 따라갑니다. 채널 유입의 90% 이상이 홈·구독 피드이고 검색은 거의 0이라, 매 편 홈 시험을 통과하느냐가 전부인 구조입니다.</p>
+<h3>4-3. 같은 주제 다른 채널 영상 (11/3 수집, 누적 조회수)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>제목</th>
+<th>구독자</th>
+<th>조회수</th>
+<th>업로드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>수능 20일 전, 고전시가 지금 시작해도 늦지 않은 방법</td>
+<td>2.34만</td>
+<td>8,207</td>
+<td>10/30</td>
+</tr>
+<tr>
+<td>[BEST] 2027 수능 국어 문학 연계 예상</td>
+<td>1.05만</td>
+<td>20,112</td>
+<td>10/31</td>
+</tr>
+<tr>
+<td>2027수능 전 반드시 읽어야 할 EBS 문학 작품들</td>
+<td>9.46천</td>
+<td>15,492</td>
+<td>10/26</td>
+</tr>
+<tr>
+<td>D-22, 수능 전에 이 '8작품'만큼은 반드시 보고 가세요</td>
+<td>6.52만</td>
+<td>46,977</td>
+<td>10/28</td>
+</tr>
+<tr>
+<td>수능 50일 전, 이 30편은 꼭 다시 보고 가세요 (몰아보기)</td>
+<td>4.23천</td>
+<td>99,526</td>
+<td>9/27</td>
+</tr>
+<tr>
+<td>EBS 수특·수완, 어디까지 공부해야 할까?</td>
+<td>1.19만</td>
+<td>115,479</td>
+<td>10/21</td>
+</tr>
+<tr>
+<td>2027 수능 문학 우선순위 (현대시 vs 고전시가…)</td>
+<td>3.13천</td>
+<td>1,366</td>
+<td>10/5</td>
+</tr>
+<tr>
+<td>수능 전 EBS 문학, 아직 못 끝냈다면 이렇게 하세요</td>
+<td>2.71천</td>
+<td>326</td>
+<td>10/23</td>
+</tr>
+</tbody>
+</table></div>
+<p>잘 된 영상은 결과물형("이 N작품", "연계 예상", "몰아보기") 또는 학생 질문형 + 결론 약속형입니다. "우선순위", "아직 못 끝냈다면"처럼 설득·구제형은 같은 채널 안에서도 약했습니다. 다만 다른 채널은 노출·클릭률을 볼 수 없어 누적 조회수로만 비교한 것이고, 잘 된 영상 위주로 모였을 수 있습니다.</p>
+<h3>4-4. 한계</h3>
+<ul>
+<li>비교 표본이 5편뿐이라 원인을 확정할 수는 없습니다.</li>
+<li>시간대별 홈 노출 곡선은 이번 편만 볼 수 있어 이전 편과 곡선 비교는 못 했습니다.</li>
+<li>데이터: YouTube 스튜디오(게시 후 약 39시간, 2026-11-03 08:50 기준), 다른 채널 공개 조회수.</li>
+</ul></main></body></html>
